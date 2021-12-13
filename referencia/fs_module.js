@@ -66,7 +66,7 @@ fs.copyFile(
 //Mover un archivo
 /*
 fs.copyFile(
-    path.join('./renombrar.txt', '.'),
+    path.join(__dirname,'./renombrar.txt', '.'),
     err => {
 
         if(err){
@@ -100,21 +100,36 @@ const user = [
 ];
 
 //crear la carpeta
-fs.mkdir(path.join(__dirname, "Usuarios"), {}, (err) => {
-    if(err) throw err;
+fs.mkdir(path.join(__dirname, "Users"), {}, (err) => {
+    if(err) ('throw err');
     console.log("Dir ok!!");
 
 //creamos el archivo
 fs.writeFile(
-    path.join(__dirname, "Usuarios","Usuarios.json"),
+    path.join(__dirname, "Users","users.json"),
     JSON.stringify(users),
     
     (err) => {
-if(err) throw err
+if (err) throw err;
 console.log("File ok!!");
-}
+
+        //Leemos el json
+    /*    fs.readFile(
+            path.join(__dirname, "users", "users.json"),
+            (err, data) => {
+                //Mostrar los datos
+            const users= JSON.parse(data)
+            users.forEach(user => {
+                console.log(user.name);
+            });
+
+            }
+        );
+
+    }
 );
-});
-
-
-
+}); */
+fs.readdir(__dirname, (err, files) => {
+    if(err) throw err
+    console.log(files);
+})
