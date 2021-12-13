@@ -1,0 +1,28 @@
+Node.js sin frameworks
+
+- Es un runtime, no es frameworks ni libreria
+- Está construido sobre el motor v8 de javascript, igual que Chrome 
+    igual que Chrome
+-Està escrito en C++
+-javascript del lado del servidor 
+
+¿Por qué usar Node,js?
+- Rápido
+- Eficiente
+- Escalable
+- Basado en eventos, no hay bloqueos de I/O
+- Mismo lenguaje en el cliente y el servidor
+
+Proyectos dónde usar node 
+- Rest APIS
+- Tiempo real
+- CRUD, blogs, gestion de usuarios, redes sociales , e-commercio
+-herramientas y utilidades
+-Qualquier app que no reuiera uso intensivo de CPU
+
+Usá módulos
+- Core Modules(path, fs, http, url, events)
+-3rd party modules/packages, se instalan con NPN
+- Custom Modules
+-- const path = require("Path)
+
